@@ -1,4 +1,4 @@
-import { API } from "../API/page"
+import { API } from "../API/api"
 import { IProductsResponse } from "../types/page"
 
 export const getProducts = async () => {
