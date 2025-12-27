@@ -1,8 +1,8 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import { IProducts } from './types/page';
-import { getProducts } from './services/page';
+import { IProducts } from './types/types';
+import { getProducts } from './services/services';
 
 const Home = () => {
   const {
