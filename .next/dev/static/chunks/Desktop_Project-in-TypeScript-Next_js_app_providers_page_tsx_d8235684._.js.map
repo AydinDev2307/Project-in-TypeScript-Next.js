@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/jamshid/Desktop/Project-in-TypeScript-Next.js/app/providers/page.tsx"],"sourcesContent":["'use client';\n\nimport { QueryClient, QueryClientProvider } from '@tanstack/react-query';\nimport { ReactNode, useState } from 'react';\n\nexport default function Providers({ children }: { children: ReactNode }) {\n  const [queryClient] = useState(\n    () =>\n      new QueryClient({\n        defaultOptions: {\n          queries: {\n            staleTime: 1000 * 60 * 20,\n            refetchOnWindowFocus: false,\n            retry: 1,\n          },\n        },\n      })\n  );\n\n  return (\n    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;AAAA;AACA;;;AAHA;;;AAKe,SAAS,UAAU,EAAE,QAAQ,EAA2B;;IACrE,MAAM,CAAC,YAAY,GAAG,IAAA,iOAAQ;8BAC5B,IACE,IAAI,uPAAW,CAAC;gBACd,gBAAgB;oBACd,SAAS;wBACP,WAAW,OAAO,KAAK;wBACvB,sBAAsB;wBACtB,OAAO;oBACT;gBACF;YACF;;IAGJ,qBACE,qPAAC,wQAAmB;QAAC,QAAQ;kBAAc;;;;;;AAE/C;GAjBwB;KAAA"}}]
+}

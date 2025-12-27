@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 88, "column": 0}, "map": {"version":3,"sources":["file:///home/jamshid/Desktop/Project-in-TypeScript-Next.js/app/API/page.ts"],"sourcesContent":["\"use client\"\nimport axios from \"axios\";\n\nexport const API = axios.create({\n  baseURL: process.env.NEXT_PUBLIC_API_URL,\n  headers: {\n    \"Content-Type\": \"application/json\",\n  }\n})\n\n"],"names":[],"mappings":";;;;AACA;AADA;;AAGO,MAAM,MAAM,wMAAK,CAAC,MAAM,CAAC;IAC9B,OAAO;IACP,SAAS;QACP,gBAAgB;IAClB;AACF"}}]
+}
