@@ -1,6 +1,16 @@
-import React from 'react';
+'use client';
+
+import { useCartStore } from '@/app/store/cart';
+import { useFavoriteStore } from '@/app/store/favorite';
+import { useSearchStore } from '@/app/store/search';
 
 const Header = () => {
+  const { favorites } = useFavoriteStore();
+  const { cart } = useCartStore();
+  const { search, setSearch } = useSearchStore();
+
+  const favCount = favorites.length;
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
   return (
     <header className="w-full h-[100px] bg-gray-500">
       <nav className="w-[1600px] h-[100px] container mx-auto flex items-center justify-between">
@@ -10,11 +20,25 @@ const Header = () => {
             className="border border-white w-[500px] h-[40px] rounded-[30px] shadow-sm p-[20px] text-white focus:outline-none shadow-white"
             type="text"
             placeholder="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
         </div>
         <div className="flex gap-[20px]">
-          <h3 className='text-white text-[24px] font-[600]'>Favorites (0)</h3>
-          <h3 className='text-white text-[24px] font-[600]'>Purchases</h3>
+          <div>
+            {favCount > 0 && (
+              <span className="absolute -top-2 -right-3 bg-red-600 text-white text-xs px-2 rounded-full">
+                {favCount}
+              </span>
+            )}
+          </div>
+          <div>
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-3 bg-green-600 text-white text-xs px-2 rounded-full">
+                {cartCount}
+              </span>
+            )}
+          </div>
         </div>
       </nav>
     </header>

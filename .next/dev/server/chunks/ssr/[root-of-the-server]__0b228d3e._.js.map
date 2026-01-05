@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///home/jamshid/Desktop/Project-in-TypeScript-Next.js/app/products/%5Bid%5D/page.tsx"],"sourcesContent":["import React from 'react'\n\nconst DetailPage = () => {\n  return (\n    <div>DetailPage</div>\n  )\n}\n\nexport default DetailPage"],"names":[],"mappings":";;;;;;AAEA,MAAM,aAAa;IACjB,qBACE,sSAAC;kBAAI;;;;;;AAET;uCAEe"}}]
+}
